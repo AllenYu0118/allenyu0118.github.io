@@ -15,9 +15,9 @@ jobs:
 
     #发布到mybells.github.io/master
     - name: Deploy yuxiaolei1989.github.io/master
-      uses: crazy-max/ghaction-github-pages@v1
-      with:
-        target_branch: master
-        build_dir: docs/.vuepress/dist
+      uses: s0/git-publish-subdir-action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+        REPO: yuxiaolei1989/yuxiaolei1989.github.io
+        BRANCH: master
+        FOLDER: docs/.vuepress/dist        
+        SSH_PRIVATE_KEY: ${{ secrets.ACTION_TOKEN }}
