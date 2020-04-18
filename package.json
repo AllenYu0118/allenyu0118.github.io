@@ -4,10 +4,6 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "devDependencies": {
-    "vuepress": "^0.14.8"
-  },
-  
   "version": "1.0.0",
   "directories": {
     "doc": "docs"
@@ -23,5 +19,8 @@
     "url": "https://github.com/yuxiaolei1989/mySelf/issues"
   },
   "homepage": "https://yuxiaolei1989.github.io",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "vuepress": "^1.4.1"
+  }
 }
