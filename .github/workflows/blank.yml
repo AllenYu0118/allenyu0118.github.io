@@ -15,11 +15,9 @@ jobs:
 
     #发布到mybells.github.io/master
     - name: Deploy yuxiaolei1989.github.io/master
-      uses: peaceiris/actions-gh-pages@v2
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
-        EXTERNAL_REPOSITORY: yuxiaolei1989/yuxiaolei1989.github.io #可以新建一个mybells.github.io仓库发布到master
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: docs/.vuepress/dist
+      uses: crazy-max/ghaction-github-pages@v1
       with:
-          emptyCommits: false
+        target_branch: master
+        build_dir: docs/.vuepress/dist
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
