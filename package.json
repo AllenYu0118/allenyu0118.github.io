@@ -1,10 +1,27 @@
 {
-    "scripts": {
-        "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs"
-    },
-
-    "devDependencies": {
-        "vuepress": "^0.14.8"
-    }
+  "name": "allenyu-blog",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^0.14.8"
+  },
+  
+  "version": "1.0.0",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuxiaolei1989/mySelf.git"
+  },
+  "author": "yuxiaolei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuxiaolei1989/mySelf/issues"
+  },
+  "homepage": "https://yuxiaolei1989.github.io",
+  "description": ""
 }
