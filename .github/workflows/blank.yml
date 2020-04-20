@@ -24,7 +24,7 @@ jobs:
       - name: Build and Deploy Repo
         uses: JamesIves/github-pages-deploy-action@releases/v3-test
         with:
-          BASE_BRANCH: master
-          BRANCH: gh-pages
+          REPOSITORY_NAME: yuxiaolei1989/yuxiaolei1989.github.io
+          BRANCH: master
           FOLDER: docs/.vuepress/dist
           SSH: true # SSH must be set to true
