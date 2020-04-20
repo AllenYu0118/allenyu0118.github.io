@@ -1,23 +1,30 @@
-name: github pages
-
+name: Publish docs to github actions
 on:
   push:
     branches:
-    - master
-
+      - master
+  pull_request:
+    branches:
+      - master
 jobs:
-  build-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - run: npm ci # 相当于npm install
-    - run: npm run docs:build
+      - name: Checkout
+        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
+      - name: Install
+        run: npm ci && npm run-script docs:build
+      - name: Install SSH Client
+        uses: webfactory/ssh-agent@v0.2.0 # This step installs the ssh client into the workflow run. There's many options available for this on the action marketplace.
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
-    #发布到mybells.github.io/master
-    - name: Deploy yuxiaolei1989.github.io/master
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        deploy_key: ${{ secrets.DEPLOY_KEY }}
-        external_repository: yuxiaolei1989/yuxiaolei1989.github.io #可以新建一个mybells.github.io仓库发布到master
-        publish_branch: master
-        publish_dir: docs/.vuepress/dist
+      - name: Build and Deploy Repo
+        uses: JamesIves/github-pages-deploy-action@releases/v3-test
+        with:
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: docs/.vuepress/dist
+          SSH: true # SSH must be set to true
