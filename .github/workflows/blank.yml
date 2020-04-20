@@ -17,7 +17,7 @@ jobs:
     - name: Deploy yuxiaolei1989.github.io/master
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.ACTION_TOKEN }}
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
         external_repository: yuxiaolei1989/yuxiaolei1989.github.io #可以新建一个mybells.github.io仓库发布到master
         publish_branch: master
         publish_dir: docs/.vuepress/dist
