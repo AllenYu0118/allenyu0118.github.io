@@ -15,4 +15,6 @@ jobs:
         with:
           persist-credentials: false
       - name: Install
+        run: npm ci && npm run-script docs:build
+      - name: Deploy.sh
         run: sh deploy.sh
