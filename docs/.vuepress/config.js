@@ -1,5 +1,4 @@
 module.exports = {
-    base: '/mySelf/',
     title: "余小磊的博客",
     description: "前端工程师，技术爱好者，记录自己的学习内容以及技术思考",
 
