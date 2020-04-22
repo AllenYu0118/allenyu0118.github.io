@@ -2,7 +2,7 @@ name: GitHub Actions Build and Deploy Demo
 on:
   push:
     branches:
-      - master
+      - dev
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,6 +14,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: docs/.vuepress/dist
         BUILD_SCRIPT: npm install && npm run docs:build
