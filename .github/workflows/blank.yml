@@ -1,20 +1,17 @@
-name: Publish docs to github actions
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+name: Build and Deploy
+on: [push]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-        with:
-          persist-credentials: false
-      - name: Install
-        run: npm ci && npm run-script docs:build
-      - name: Deploy.sh
-        run: sh deploy.sh
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Build and Deploy
+      uses: grasilife/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
+        BASE_BRANCH: master # The branch the action should deploy from.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build # The folder the action should deploy.
+        BUILD_SCRIPT: npm install && npm run-script build # The build script the action should run prior to deploying.
