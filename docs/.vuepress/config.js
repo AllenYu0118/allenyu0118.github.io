@@ -19,7 +19,7 @@ module.exports = {
                     title: "基础",
                     collapsable: false,
                     children: [
-                        { title: "基础类型", path: "basic-types" },
+                        { title: "原始数据类型", path: "primitive-data-types" },
                         { title: "变量声明", path: "variable-declarations" },
                     ],
                 },
