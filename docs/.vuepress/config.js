@@ -1,13 +1,12 @@
 module.exports = {
     title: 'Allen Yu',
     description: '前端工程师，技术爱好者，记录自己的学习内容以及技术思考',
-
+    head: [['link', { rel: 'icon', href: '/icon.png' }]],
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
             { text: 'TypeScript', link: '/ts/' }
         ],
-        head: [['link', { rel: 'icon', href: '/icon.png' }]],
         sidebar: {
             '/ts/': [
                 {
