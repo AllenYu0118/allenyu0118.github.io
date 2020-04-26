@@ -5,9 +5,9 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'TypeScript', link: '/ts/' },
-            { text: 'CSS3', link: '/css3/' }
+            { text: 'TypeScript', link: '/ts/' }
         ],
+        head: [['link', { rel: 'icon', href: '/icon.png' }]],
         sidebar: {
             '/ts/': [
                 {
@@ -26,6 +26,9 @@ module.exports = {
                 }
             ]
         },
+        repo: 'yuxiaolei1989/yuxiaolei1989.github.io',
+        repoLabel: '仓库地址',
+        docsBranch: 'master',
         lastUpdated: 'Last Updated'
     }
 }
