@@ -26,7 +26,7 @@ module.exports = {
             ]
         },
         repo: 'yuxiaolei1989/yuxiaolei1989.github.io',
-        repoLabel: '仓库地址',
+        repoLabel: 'GitHub',
         docsBranch: 'master',
         lastUpdated: 'Last Updated'
     }
