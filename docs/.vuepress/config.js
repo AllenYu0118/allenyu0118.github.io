@@ -29,5 +29,7 @@ module.exports = {
         repoLabel: 'GitHub',
         docsBranch: 'master',
         lastUpdated: 'Last Updated'
-    }
+    },
+
+    plugins: [['vuepress-plugin-google-tag-manager', { gtm: 'GTM-MRK7Q86' }]]
 }

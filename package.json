@@ -8,7 +8,9 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vuepress-plugin-google-tag-manager": "0.0.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuxiaolei1989/mySelf.git"
