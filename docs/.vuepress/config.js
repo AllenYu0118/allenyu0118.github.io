@@ -21,7 +21,8 @@ module.exports = {
                         { title: '原始数据类型', path: 'primitive-data-types' },
                         { title: '任意值', path: 'any' },
                         { title: '类型推论', path: 'type-inference' },
-                        { title: '联合类型', path: 'union-types' }
+                        { title: '联合类型', path: 'union-types' },
+                        { title: '接口', path: 'interfaces' }
                     ]
                 }
             ]
