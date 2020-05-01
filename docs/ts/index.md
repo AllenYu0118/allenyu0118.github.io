@@ -1,3 +1,5 @@
+> 声明：本内容参考文档来自[TypeScript 入门教程](https://ts.xcatliu.com/basics/primitive-data-types)，感谢作者提供了由浅入深的内容，使我在学习 `TypeScript` 的时候更加的愉快。
+
 ## 什么是 TypeScript
 
 [TypeScript](https://www.typescriptlang.org/) 是 `JavaScript` 的超集，主要提供类型系统和 ES6 支持，能够为编写大型 `JavaScript` 程序提供静态类型检查，它由 `Microsoft` 开发，代码[开源在 GitHub ](https://github.com/Microsoft/TypeScript)上。

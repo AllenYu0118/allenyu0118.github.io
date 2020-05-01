@@ -22,7 +22,8 @@ module.exports = {
                         { title: '任意值', path: 'any' },
                         { title: '类型推论', path: 'type-inference' },
                         { title: '联合类型', path: 'union-types' },
-                        { title: '接口', path: 'interfaces' }
+                        { title: '接口', path: 'interfaces' },
+                        { title: '数组类型', path: 'type-of-array' }
                     ]
                 }
             ]
