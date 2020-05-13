@@ -3,6 +3,7 @@ module.exports = {
     description: '前端工程师，技术爱好者，记录自己的学习内容以及技术思考',
     head: [['link', { rel: 'icon', href: '/icon.png' }]],
     themeConfig: {
+        sidebarDepth: 2,
         nav: [
             { text: 'Home', link: '/' },
             { text: 'TypeScript', link: '/ts/' }
@@ -36,5 +37,11 @@ module.exports = {
         lastUpdated: 'Last Updated'
     },
 
-    plugins: [['vuepress-plugin-google-tag-manager', { gtm: 'GTM-MRK7Q86' }]]
+    plugins: [['vuepress-plugin-google-tag-manager', { gtm: 'GTM-MRK7Q86' }]],
+
+    markdown: {
+        extractHeaders: ['h2', 'h3']
+    },
+
+    evergreen: true
 }
