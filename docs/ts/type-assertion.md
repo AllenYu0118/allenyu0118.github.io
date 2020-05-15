@@ -288,7 +288,279 @@ tom.run()
 
 那么类型断言有没有什么限制呢？是不是任何一个类型都可以被断言为任何另一个类型呢？
 
+```typescript
+interface Animal {
+    name: string
+}
+
+interface Cat {
+    name: string
+    run(): void
+}
+
+let tom: Cat = {
+    name: 'tom',
+    run () => {
+        console.log(this.name)
+    }
+}
+
+let animal: Animal = tom
+```
+
+我们知道，`TypeScript` 是结构类型系统，类型之间的对比只会比较他们最终的结构，而会忽略他们定义时的关系。
+
+在上面的例子中，`Cat` 包含了 `Animal` 中的所有属性，除此之外，它还有一个额外的方法 `run`。
+
+`TypeScript` 并不关心 `Cat` 和 `Animal` 之间定义时是什么关系，而只会看它们最终的结构有什么关系 -- 所以它和 `Cat extends Animal` 是等价的。
+
+```typescript
+interface Animal {
+    name: string
+}
+
+interface Cat extends Animal {
+    run(): void
+}
+```
+
+那么也不难理解为什么 `Cat` 类型的 `tom` 可以赋值给 `Animal` 类型的 `animal` 了 -- 就像面向对象编程中，我们可以将子类的实例赋值给类型为父类的变量。
+
+我们把它换成 `TypeScript` 中更专业的说法，即：`Animal` 兼容 `Cat`。
+
+当 `Animal` 兼容 `Cat` 时，它们就可以相互进行类型断言了：
+
+```typescript
+interface Animal {
+    name: string
+}
+
+interface Cat {
+    name: string
+    run(): void
+}
+function testAnimal(animal: Animal) {
+    return animal as Cat
+}
+
+function testCat(cat: Cat) {
+    return cat as Animal
+}
+```
+
+这样的设计其实很容易就能理解：
+
+-   允许 `Animal as Cat` 是因为 「父类可以被断言为子类」。
+-   允许 `Cat as Animal` 是因为既然子类拥有父类的属性和方法，那么被断言为父类，获取父类的属性、调用父类的方法，就不会有任何问题，故「子类可以被断言为父类」
+
+综上所述：
+
+-   联合类型可以被断言为其中一个类型
+-   父类可以被断言为子类
+-   任何类型都可以被断言为 `any`
+-   `any` 可以被断言为任何类型
+-   要使得 `A` 能够被断言为 `B`，只需要 `A` 兼容 `B`， 或者 `B` 兼容 `A`
+
+## 双重断言
+
+既然：
+
+-   任何类型都可以被断言为 `any`
+-   `any` 可以被断言为任何类型
+
+那么我们是不是可以使用双重断言 `as any as Foo` 来将任何一个类型断言为任何另一个类型呢？
+
+```typescript
+interface Cat {
+    run(): void
+}
+
+interface Fish {
+    swim(): void
+}
+
+function testCat(cat: Cat) {
+    return (cat as any) as Fish
+}
+```
+
+上面的例子中，若直接使用 `cat as Fish` 肯定会报错，因为 `Cat` 和 `Fish` 相互都不兼容。
+
+但使用 `as any as Fish` 就不会报错了，但使用这种双重断言，十有八九是非常错误的，它很可能会导致运行时错误。
+
+**除非迫不得以，千万别用双重断言**
+
+## 类型断言 VS 类型转换
+
+类型断言只会影响 `TypeScript` 编译时的类型，类型断言语句在编译结果中会被删除：
+
+```typescript
+function toBoolean(something: any): boolean {
+    return something as boolean
+}
+
+toBoolean(1) // 返回值还是 1
+```
+
+上面的例子中，将 `something` 断言为 `boolean` 虽然可以通过编译，但是并没有什么用，代码在编译后会变成：
+
+```javascript
+function toBoolean(something) {
+    return something
+}
+
+toBoolean(1)
+```
+
+所以类型断言不是类型转换，它不会真的影响到变量的类型。
+
+若要进行类型转换，需要直接调用类型转换的方法：
+
+```typescript
+function toBoolean(something: any): boolean {
+    return Boolean(something)
+
+toBoolean(1) // 返回值 true
+```
+
+## 类型断言 VS 类型声明
+
+在下面的例子中：
+
+```typescript
+function getCacheData(key: string): any {
+    return (window as any).cache[key]
+}
+
+interface Cat {
+    name: string
+    run(): void
+}
+
+const tom = getCacheData('tom') as Cat
+
+tom.run()
+```
+
+我们使用 `as Cat` 将 `getCacheData` 函数返回的 `any` 类型，断言为 `Cat`。
+
+但实际上还有其他方案可以解决同样的问题：
+
+```typescript
+function getCacheData(key: string): any {
+    return (window as any).cache[key]
+}
+
+interface Cat {
+    name: string
+    run(): void
+}
+
+const tom: Cat = getCacheData('tom')
+
+tom.run()
+```
+
+上面的例子中，我们通过类型声明的方式，将 `tom` 变量声明为 `Cat` 类型，然后再将 `any` 类型的 `getCacheData` 函数返回值，赋值给 `Cat` 类型的 `tom`。
+
+它们的区别，可以通过下面的例子理解：
+
+```typescript
+interface Animal {
+    name: string
+}
+
+interface Cat {
+    name: string
+    run(): void
+}
+
+const animal: Animal = {
+    name: 'tom'
+}
+
+let tom = animal as Cat
+```
+
+在上面的例子中，由于 `Animal` 兼容 `Cat`，故可以将 `Animal` 断言为 `Cat`，并赋值给 `tom`。
+
+但若是直接声明 `tom` 为 `Cat` 类型：
+
+```typescript
+interface Animal {
+    name: string
+}
+
+interface Cat {
+    name: string
+    run(): void
+}
+
+const animal: Animal = {
+    name: 'tom'
+}
+
+let tom: Cat = animal
+
+// Property 'run' is missing in type 'Animal' but required in type 'Cat'.ts(2741)
+// demo.ts(7, 3): 'run' is declared here.
+```
+
+则会报错，不允许将 `animal` 赋值给 `Cat` 类型的 `tom`。
+
+简单理解，`animal` 可以看做是 `Cat` 的父类，当然不能将父类的实例，赋值给，类型为子类的变量。
+
+深入理解，它们的核心区别在于：
+
+-   `animal` 断言为 `Cat`， 只需要满足 `Animal` 兼容 `Cat`，或者 `Cat` 兼容 `Animal`即可
+-   `animal` 赋值给 `tom`，需要满足 `Cat` 兼容 `Animal` 才行，但这里的例子中，`Cat` 并不兼容 `Animal`
+
+知道了它们的核心区别，就知道了类型声明比类型断言更严格。
+
+所以为了增加代码的质量，我们最好优先使用类型声明，这也比类型断言的 `as` 语法更加的优雅。
+
+## 类型断言 VS 泛型
+
+还是这个例子
+
+```typescript
+function getCacheData(key: string): any {
+    return (window as any).cache[key]
+}
+
+interface Cat {
+    name: string
+    run(): void
+}
+
+const tom = getCacheData('tom') as Cat
+
+tom.run()
+```
+
+我们还有第三种，可以解决这个问题，那就是泛型：
+
+```typescript
+function getCacheData<T>(key: string): T {
+    return (window as any).cache[key]
+}
+
+interface Cat {
+    name: string
+    run(): void
+}
+
+const tom = getCacheData<Cat>('tom')
+
+tom.run()
+```
+
+通过给 `getCacheData` 函数添加了一个泛型 `<T>`，我们可以更加规范的实现对 `getCacheData` 返回值的约束，这也同时去除掉了代码中 `any`，是最优的一个解决方案。
+
+## 问答
+
+-   类型声明和类型断言哪个更严格，为什么？
+
 ## 参考
 
--   [TypeScript 入门教程 - 任意值](https://ts.xcatliu.com/basics/any)
--   [TypeScript 中文网 - 基础类型 - Any](https://www.tslang.cn/docs/handbook/basic-types.html)
+-   [TypeScript 入门教程 - 任意值](https://ts.xcatliu.com/basics/type-assertion)
