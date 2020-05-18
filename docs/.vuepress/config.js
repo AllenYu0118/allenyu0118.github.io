@@ -26,7 +26,8 @@ module.exports = {
                         { title: '接口', path: 'interfaces' },
                         { title: '数组类型', path: 'type-of-array' },
                         { title: '函数类型', path: 'type-of-function' },
-                        { title: '类型断言', path: 'type-assertion' }
+                        { title: '类型断言', path: 'type-assertion' },
+                        { title: '声明文件', path: 'declaration-files' }
                     ]
                 }
             ]
