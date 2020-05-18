@@ -109,6 +109,103 @@ npm install @types/jquery --save-dev
 -   `declare namespace` 声明全局对象
 -   `interface` 和 `type` 声明全局类型
 
+#### declare var
+
+定义一个全局变量的类型，与其类似的，还有 `declare let` 和 `declare const`，使用 `let` 和使用 `var` 没有什么区别
+
+```typescript
+// src/jquery.d.ts
+
+declare let jQuery: (selector: string) => any;
+```
+
+```typescript
+// src/index.ts
+jQuery('#foo')
+
+jQuery = function (selector) {
+    return document.querySelector(selector);
+}
+```
+而当我们使用 `const` 定义时，表示此时的全局变量是一个常量，不允许再修改它的值了。
+
+
+#### declare function
+
+`declare function` 用来定义全局函数的类型。`jQuery` 就是一个函数，所以也可以使用 `function` 定义。
+
+```typescript
+declare function jQuery(selector: string) => any;
+```
+
+函数重载也是支持的：
+
+```typescript
+declare function jQuery(selector: string) => any;
+declare function jQuery(domReadyCallback: () => any): any;
+```
+
+#### declare class
+
+当全局变量是一个类的时候，我们使用 `declare class` 来定义它的类型
+
+```typescript
+declare class Animal {
+    name: string
+    constructor(name: string)
+    sayHi(): string
+}
+
+```
+
+#### declare enum
+
+使用 `declare enum` 定义的枚举类型也称作外部枚举
+
+
+```typescript
+declare enum Direction {
+    Up,
+    Down,
+    Left,
+    Right
+}
+```
+
+#### declare namespace
+
+用来表示全局变量是一个对象，包含很多子属性
+
+```typescript
+declare namespace jQuery {
+    function ajax(url: string, settting?: any): void
+}
+```
+
+#### 嵌套的命名空间
+
+如果对象有深层的层级，则需要使用嵌套的 `namespace` 声明深层的属性类型
+
+```typescript
+declare namespace jQuery {
+    function ajax(url: string, settting?: any): void
+
+    namespace fn {
+        function extend(object: any): void
+    }
+}
+```
+
+假如 `jQuery` 下仅有 `fn` 这一个属性，则可以不需要嵌套：
+
+```typescript
+declare namespace jQuery.fn {
+    function extend(object: any): void
+}
+```
+
+
+
 ## 参考
 
 -   [TypeScript 入门教程 - 任意值](https://ts.xcatliu.com/basics/any)
