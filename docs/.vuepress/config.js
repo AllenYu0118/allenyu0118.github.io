@@ -1,11 +1,14 @@
 module.exports = {
+    theme: 'reco',
     title: 'Allen Yu',
     description: '前端工程师，技术爱好者，记录自己的学习内容以及技术思考',
     head: [['link', { rel: 'icon', href: '/icon.png' }]],
     themeConfig: {
+        type: 'blog',
         sidebarDepth: 2,
         nav: [
-            { text: 'Home', link: '/' },
+            { text: '首页', link: '/' },
+            { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
             { text: 'TypeScript', link: '/ts/' }
         ],
         sidebar: {
@@ -35,13 +38,30 @@ module.exports = {
         repo: 'yuxiaolei1989/yuxiaolei1989.github.io',
         repoLabel: 'GitHub',
         docsBranch: 'master',
-        lastUpdated: 'Last Updated'
+        lastUpdated: 'Last Updated',
+        // 博客配置
+        blogConfig: {
+            category: {
+                location: 2, // 在导航栏菜单中所占的位置，默认2
+                text: '分类' // 默认文案 “分类”
+            },
+            tag: {
+                location: 3, // 在导航栏菜单中所占的位置，默认3
+                text: '标签' // 默认文案 “标签”
+            }
+        }
     },
 
     plugins: [['vuepress-plugin-google-tag-manager', { gtm: 'GTM-MRK7Q86' }]],
 
     markdown: {
         extractHeaders: ['h2', 'h3']
+    },
+
+    locales: {
+        '/': {
+            lang: 'zh-CN'
+        }
     },
 
     evergreen: true

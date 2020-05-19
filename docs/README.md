@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /cat-01.jpg
+# heroImage: /cat-01.jpg
 # heroText: 余小磊的博客
 tagline: 前端工程师，技术爱好者，记录和总结自己
 # actionText: 快速上手 →

@@ -116,19 +116,19 @@ npm install @types/jquery --save-dev
 ```typescript
 // src/jquery.d.ts
 
-declare let jQuery: (selector: string) => any;
+declare let jQuery: (selector: string) => any
 ```
 
 ```typescript
 // src/index.ts
 jQuery('#foo')
 
-jQuery = function (selector) {
-    return document.querySelector(selector);
+jQuery = function(selector) {
+    return document.querySelector(selector)
 }
 ```
-而当我们使用 `const` 定义时，表示此时的全局变量是一个常量，不允许再修改它的值了。
 
+而当我们使用 `const` 定义时，表示此时的全局变量是一个常量，不允许再修改它的值了。
 
 #### declare function
 
@@ -155,13 +155,11 @@ declare class Animal {
     constructor(name: string)
     sayHi(): string
 }
-
 ```
 
 #### declare enum
 
 使用 `declare enum` 定义的枚举类型也称作外部枚举
-
 
 ```typescript
 declare enum Direction {
@@ -204,7 +202,7 @@ declare namespace jQuery.fn {
 }
 ```
 
-
+####
 
 ## 参考
 
