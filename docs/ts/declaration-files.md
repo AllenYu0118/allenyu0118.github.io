@@ -116,19 +116,19 @@ npm install @types/jquery --save-dev
 ```typescript
 // src/jquery.d.ts
 
-declare let jQuery: (selector: string) => any;
+declare let jQuery: (selector: string) => any
 ```
 
 ```typescript
 // src/index.ts
 jQuery('#foo')
 
-jQuery = function (selector) {
-    return document.querySelector(selector);
+jQuery = function(selector) {
+    return document.querySelector(selector)
 }
 ```
-而当我们使用 `const` 定义时，表示此时的全局变量是一个常量，不允许再修改它的值了。
 
+而当我们使用 `const` 定义时，表示此时的全局变量是一个常量，不允许再修改它的值了。
 
 #### declare function
 
@@ -155,13 +155,11 @@ declare class Animal {
     constructor(name: string)
     sayHi(): string
 }
-
 ```
 
 #### declare enum
 
 使用 `declare enum` 定义的枚举类型也称作外部枚举
-
 
 ```typescript
 declare enum Direction {
@@ -204,7 +202,132 @@ declare namespace jQuery.fn {
 }
 ```
 
+#### `interface` 和 `type`
 
+用来声明全局接口和类型
+
+```typescript
+// typs/jQuery.d.ts
+interface AjaxSettings {
+    method?: 'GET' | 'POST'
+    data?: any
+}
+
+declare namespace jQuery {
+    function ajax(url: string, settings?: AjaxSettings): void
+}
+```
+
+这样，就可以在其他文件中也可以使用这个接口或者类型了
+
+```typescript
+// src/index.ts
+let settings: AjaxSettings = {
+    method: 'POST',
+    data: {
+        name: 'Allen Yu'
+    }
+}
+
+jQuery.ajax('/api/postForm', settings)
+```
+
+#### 防止命名冲突
+
+暴露在最外层的 `interface` 和 `type` 会作为全局类型作用于整个项目中，在项目比较大的情况下，很容易导致冲突，我们应该尽量减少使用。
+
+故最好将它们放到 `namespace` 下：
+
+```typescript
+// typs/jQuery.d.ts
+
+declare namespace jQuery {
+    interface AjaxSettings {
+        method?: 'GET' | 'POST'
+        data?: any
+    }
+    function ajax(url: string, settings?: AjaxSettings): void
+}
+```
+
+```typescript
+// src/index.ts
+let settings: jQuery.AjaxSettings = {
+    method: 'POST',
+    data: {
+        name: 'Allen Yu'
+    }
+}
+
+jQuery.ajax('/api/postForm', settings)
+```
+
+#### 声明合并
+
+如果我们声明了相同的名称，但是不同的类型的全局类型，它们会很好的合并起来，例如：
+
+```typescript
+declare function jQuery(selector: string): any
+
+declare namespace jQuery {
+    interface AjaxSettings {
+        method?: 'GET' | 'POST'
+        data?: any
+    }
+    function ajax(url: string, settings: AjaxSettings): void
+}
+
+export {}
+```
+
+```typescript
+// src/index.ts
+let settings: jQuery.AjaxSettings = {
+    method: 'POST',
+    data: {
+        name: 'Allen Yu'
+    }
+}
+jQuery('#demo')
+jQuery.ajax('/api/postForm', settings)
+```
+
+### 声明文件在 `npm` 包中的位置
+
+一般来说，`npm` 包中的声明文件可能存在两个地方：
+
+1. 与该 `npm` 绑定在一起。判断依据是 `package.json` 中的 `types` 字段，或者有一个 `index.d.ts` 文件。
+2. 发布到 `@types` 里。只需要尝试是否能够从 `@types` 中下载对应的包，就知道是否存在该声明文件。
+
+如果以上两个地方都不存在我们需要的声明文件，那么就需要自己创建声明文件了。
+
+首先，创建一个 `types` 目录，专门用来管理自己写的声明文件。这种方式需要配置 `tsconfig.json` 中的 `paths` 和 `baseUrl` 字段。
+
+目录结构：
+
+```
+typescript/project
+├── src
+|  └── index.ts
+├── types
+|  └── jQuery
+|     └── index.d.ts
+└── tsconfig.json
+```
+
+`tsconfig.json` 内容
+
+```json
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "baseUrl": "./",
+        "paths": {
+            "*": ["types/*"]
+        }
+    }
+}
+```
 
 ## 参考
 
