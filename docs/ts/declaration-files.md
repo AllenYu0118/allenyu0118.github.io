@@ -329,7 +329,22 @@ typescript/project
 }
 ```
 
+#### 自动生成声明文件
+
+如果库的源码本身就是 `TypeScript` 写的，那么在使用 `tsc` 脚本将 `TypeScript` 编译为 `JavaScript` 的时候，添加 `--declaration` 选项，就可以同时生成 `.d.ts` 声明文件了。
+
+我们也可以在 `tsconfig.json` 中添加 `declaration` 选项。
+
+```json
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "outDir": "lib",
+        "declaration": true,
+    }
+}
+```
+
 ## 参考
 
--   [TypeScript 入门教程 - 任意值](https://ts.xcatliu.com/basics/any)
--   [TypeScript 中文网 - 基础类型 - Any](https://www.tslang.cn/docs/handbook/basic-types.html)
+-   [TypeScript 入门教程 - 声明文件](https://ts.xcatliu.com/basics/declaration-filesy)
