@@ -27,7 +27,8 @@ module.exports = {
                         { title: '数组类型', path: 'type-of-array' },
                         { title: '函数类型', path: 'type-of-function' },
                         { title: '类型断言', path: 'type-assertion' },
-                        { title: '声明文件', path: 'declaration-files' }
+                        { title: '声明文件', path: 'declaration-files' },
+                        { title: '内置对象', path: 'build-in-objects' }
                     ]
                 }
             ]
