@@ -42,6 +42,7 @@ module.exports = {
     plugins: [['vuepress-plugin-google-tag-manager', { gtm: 'GTM-MRK7Q86' }]],
 
     markdown: {
+        // 提取 h2 和 h3 的标题
         extractHeaders: ['h2', 'h3']
     },
 
