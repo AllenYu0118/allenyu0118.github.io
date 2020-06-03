@@ -3,9 +3,16 @@ module.exports = {
     description: '前端工程师，技术爱好者，记录自己的学习内容以及技术思考',
     head: [['link', { rel: 'icon', href: '/icon.png' }]],
     themeConfig: {
+        logo: '/icon.png',
         sidebarDepth: 2,
         nav: [
             { text: 'Home', link: '/' },
+            {
+                text: '分类',
+                items: [
+                    { text: 'JavaScript', link: '/js/' }
+                ]
+            },
             { text: 'TypeScript', link: '/ts/' }
         ],
         sidebar: {
@@ -30,6 +37,20 @@ module.exports = {
                         { title: '声明文件', path: 'declaration-files' },
                         { title: '内置对象', path: 'build-in-objects' }
                     ]
+                },
+                {
+                    title: '实战',
+                    children: [
+                        { title: '房贷试算器', path: 'mortgage-calculator' },
+                    ]
+                }
+            ],
+
+            '/js/': [
+                {
+                    title: '简介',
+                    collapsable: false,
+                    path: '/js/'
                 }
             ]
         },
