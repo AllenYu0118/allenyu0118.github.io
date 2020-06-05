@@ -7,12 +7,12 @@ module.exports = {
         sidebarDepth: 2,
         nav: [
             { text: 'Home', link: '/' },
-            {
-                text: '分类',
-                items: [
-                    { text: 'JavaScript', link: '/js/' }
-                ]
-            },
+            // {
+            //     text: '分类',
+            //     items: [
+            //         { text: 'JavaScript', link: '/js/' }
+            //     ]
+            // },
             { text: 'TypeScript', link: '/ts/' }
         ],
         sidebar: {
@@ -36,6 +36,13 @@ module.exports = {
                         { title: '类型断言', path: 'type-assertion' },
                         { title: '声明文件', path: 'declaration-files' },
                         { title: '内置对象', path: 'build-in-objects' }
+                    ]
+                },
+                {
+                    title: '进阶',
+                    children: [
+                        { title: '类型别名', path: 'types-alias' },
+                        { title: '字符串字面量类型', path: 'string-literal-types' },
                     ]
                 },
                 {
