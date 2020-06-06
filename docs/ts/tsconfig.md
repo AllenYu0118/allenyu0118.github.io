@@ -4,9 +4,36 @@
 
 ```json
 {
+    // 编译的文件配置，如果不设置，编译对象是目录内所有的 .ts 文件
+    "include": ["./backend/index.ts"],
+
+    // 编译项目内所有的内容，但是不编译 exclude 内的文件
+    "exclude": ["./backend/demo.ts"],
+
     "compilerOptions": {
-        // 配置编译后文件目录
-        "outDir": "./build"
+        /* 基础选项 */
+        "incremental": true,                      /* 增量编译 */
+        "target": "es5", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+        "module": "commonjs", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+        "lib": [],                                /* 指定要包含在编译中的库文件 */
+        "allowJs": true,                          /* 允许编译 javascript 文件. */
+        "checkJs": true,                          /* 在 .js 文件中显示错误信息. */
+        "declaration": true,                      /* 生成相应的 '.d.ts' 文件. */
+        "declarationMap": true,                   /* 为每一个相应的 '.d.ts' 文件生成一个 sourcemap. */
+        "sourceMap": true,                        /* 生成相应的 '.map' 文件. */
+        "outDir": "./build",                      /* 配置编译后文件目录. */
+        "rootDir": "./src",                       /* 指定的输入文件目录. */
+
+        "removeComments": true,                   /* 移除注释. */
+
+        /* 严格的类型参数检查 */
+        "strict": true,                           /* 严格的类型参数检查. */
+        "noImplicitAny": true,                    /* 不明确的指定参数类型. */
+        "strictNullChecks": true,                 /* 强制效验 null. */
+
+        /* 额外的检查 */
+        "noUnusedLocals": true,                   /* 未使用的变量显示错误. */
+        "noUnusedParameters": true,               /* 未使用的参数显示错误. */
     }
 }
 ```
@@ -101,4 +128,9 @@ npm run dev
 ```
 
 上面的代码中，相当于执行了 `npm run dev:build` 和 `npm run dev:start` 两个命令
+
+## 参考
+
+-   [TypeScript 中文网 - 项目配置 - tsconfig.json](https://www.tslang.cn/docs/handbook/tsconfig-json.html)
+
 
