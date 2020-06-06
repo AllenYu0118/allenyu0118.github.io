@@ -43,6 +43,7 @@ module.exports = {
                     children: [
                         { title: '类型别名', path: 'types-alias' },
                         { title: '字符串字面量类型', path: 'string-literal-types' },
+                        { title: '元组', path: 'tuple' },
                     ]
                 },
                 {
