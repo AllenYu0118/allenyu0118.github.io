@@ -1,4 +1,4 @@
-## 编译运转配置
+## 编译配置
 
 `TypeScript` 是无法直接运行的，需要通过编译为 `JavaScript` 文件才能执行，`tsconfig.json` 就是控制编译配置的文件。
 

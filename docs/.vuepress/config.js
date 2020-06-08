@@ -44,7 +44,7 @@ module.exports = {
                         { title: '类型别名', path: 'types-alias' },
                         { title: '字符串字面量类型', path: 'string-literal-types' },
                         { title: '元组', path: 'tuple' },
-                        { title: '编译运转配置', path: 'tsconfig' },
+                        { title: '编译配置', path: 'tsconfig' },
                     ]
                 },
                 {
