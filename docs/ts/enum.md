@@ -108,5 +108,4 @@ console.log(Days[3] === 'Wed'); // true
 
 ## 参考
 
--   [TypeScript 入门教程 - 任意值](https://ts.xcatliu.com/basics/any)
--   [TypeScript 中文网 - 基础类型 - Any](https://www.tslang.cn/docs/handbook/basic-types.html)
+-   [TypeScript 入门教程 - 枚举](https://ts.xcatliu.com/basics/enum)

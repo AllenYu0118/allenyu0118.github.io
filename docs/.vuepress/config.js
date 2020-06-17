@@ -45,6 +45,7 @@ module.exports = {
                         { title: '字符串字面量类型', path: 'string-literal-types' },
                         { title: '元组', path: 'tuple' },
                         { title: '枚举', path: 'enum' },
+                        { title: '类', path: 'class' },
                         { title: '编译配置', path: 'tsconfig' },
                     ]
                 },
