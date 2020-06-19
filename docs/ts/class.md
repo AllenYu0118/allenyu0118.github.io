@@ -210,11 +210,134 @@ class Cat extends Animal {
 }
 ```
 
-当构造函数修饰为 `protected` 时，该类不允许被继承和实例化。
-
-当构造函数修饰符为 `private` 时，该类只能被继承，不能被实例化。
+- 当构造函数修饰为 `protected` 时，该类不允许被继承和实例化。
+- 当构造函数修饰符为 `private` 时，该类只能被继承，不能被实例化。
 
 ### 参数属性
+
+修饰符和 `readonly` 还可以使用在构造函数参数中，等同于类中定义该属性同时给该属性赋值，使代码更简洁。
+
+```typescript
+class Animal {
+    public constructor (public name) {
+        this.name = name
+    }
+}
+```
+
+### readonly 关键字
+
+只读属性关键字，只允许出现在属性声明、索引签名或构造函数中。
+
+```typescript
+class Animal {
+    readonly name
+    public constructor(name) {
+        this.name = name
+    }
+}
+
+let a = new Animal('Jack')
+console.log(a.name)
+a.name = 'lucy'
+
+// 无法分配到 "name" ，因为它是只读属性。ts(2540)
+```
+
+注意，如果 `readonly` 和其他访问修饰符同时存在的话，需要写在其后面。
+
+```typescript
+class Animal {
+    public constructor (public readonly name) {
+        this.name = name
+    }
+}
+```
+
+### 抽象类
+
+`abstract` 用于定义抽象类和其中的抽象方法。
+
+什么是抽象类
+
+首先，抽象类是不允许被实例化的：
+
+```typescript
+abstract class Animal {
+    public constructor(public name) {
+        this.name = name
+    }
+
+    abstract sayHi()
+}
+let a = new Animal('Jack')
+
+// 无法创建抽象类的实例。ts(2511)
+```
+
+上面我们定义了一个抽象类 `Animal`，并且定义了一个抽象方法 `sayHi`。在实例化抽象类的时候报错了。
+
+其次，抽象类中的抽象方法必须被子类实现：
+
+```typescript
+abstract class Animal {
+    public constructor(public name) {
+        this.name = name
+    }
+    abstract sayHi()
+}
+
+class Cat extends Animal {
+    public eat() {
+        console.log(`${this.name} is eating。`)
+    }
+}
+
+let cat = new Cat('Jack')
+
+// 非抽象类“Cat”不会实现继承自“Animal”类的抽象成员“sayHi”。ts(2515)
+```
+
+下面是正确使用抽象类的例子：
+
+```typescript
+abstract class Animal {
+    public constructor(public name) {
+        this.name = name
+    }
+    abstract sayHi()
+}
+
+class Cat extends Animal {
+    public eat() {
+        console.log(`${this.name} is eating。`)
+    }
+    sayHi() {
+        console.log(`${this.name} say hi!`)
+    }
+}
+
+let cat = new Cat('Jack')
+```
+
+## 类的类型
+
+给类加上 `TypeScript` 的类型很简单，与接口类似：
+
+```typescript
+class Animal {
+    name: string
+    constructor(name: string) {
+        this.name = name
+    }
+    sayHi(): string {
+        return `${this.name} say hi!`
+    }
+}
+
+let mi = new Animal('mi mi')
+console.log('mi.sayHi(): ', mi.sayHi()); // mi.sayHi():  mi mi say hi!
+```
 
 
 ## 参考
