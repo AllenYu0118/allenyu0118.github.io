@@ -46,6 +46,7 @@ module.exports = {
                         { title: '元组', path: 'tuple' },
                         { title: '枚举', path: 'enum' },
                         { title: '类', path: 'class' },
+                        { title: '类与接口', path: 'class-and-interface' },
                         { title: '编译配置', path: 'tsconfig' },
                     ]
                 },
