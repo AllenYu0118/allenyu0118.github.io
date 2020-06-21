@@ -48,6 +48,7 @@ module.exports = {
                         { title: '类', path: 'class' },
                         { title: '类与接口', path: 'class-and-interface' },
                         { title: '泛型', path: 'generics' },
+                        { title: '声明合并', path: 'declaration-merging' },
                         { title: '编译配置', path: 'tsconfig' },
                     ]
                 },
