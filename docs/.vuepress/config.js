@@ -13,9 +13,19 @@ module.exports = {
             //         { text: 'JavaScript', link: '/js/' }
             //     ]
             // },
+            { text: 'Nodejs', link: '/nodejs/' },
             { text: 'TypeScript', link: '/ts/' }
         ],
         sidebar: {
+            '/nodejs/': [
+                {
+                    title: '工具库',
+                    collapsable: false,
+                    children: [
+                        { title: 'log4js', path: 'log4js' }
+                    ]
+                },
+            ],
             '/ts/': [
                 {
                     title: '简介',
