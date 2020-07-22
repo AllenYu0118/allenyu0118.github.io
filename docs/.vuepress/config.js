@@ -22,6 +22,7 @@ module.exports = {
                     title: '工具库',
                     collapsable: false,
                     children: [
+                        { title: 'puppeteer', path: 'puppeteer' },
                         { title: 'log4js', path: 'log4js' }
                     ]
                 },
