@@ -13,10 +13,23 @@ module.exports = {
             //         { text: 'JavaScript', link: '/js/' }
             //     ]
             // },
+            { text: 'Vue 3.0', link: '/vue3/' },
             { text: 'Nodejs', link: '/nodejs/' },
             { text: 'TypeScript', link: '/ts/' }
         ],
         sidebar: {
+            '/vue3/': [
+                {
+                    title: '简介',
+                    collapsable: false,
+                    path: '/vue3/'
+                },
+                {
+                    title: 'API',
+                    collapsable: false,
+                    path: 'api'
+                },
+            ],
             '/nodejs/': [
                 {
                     title: 'Web  框架',
