@@ -19,11 +19,18 @@ module.exports = {
         sidebar: {
             '/nodejs/': [
                 {
+                    title: 'Web  框架',
+                    collapsable: true,
+                    children: [
+                        { title: 'Koa2', path: 'koa2' }
+                    ]
+                },
+                {
                     title: '工具库',
                     collapsable: false,
                     children: [
-                        { title: 'puppeteer', path: 'puppeteer' },
-                        { title: 'log4js', path: 'log4js' }
+                        { title: 'Puppeteer', path: 'puppeteer' },
+                        { title: 'Log4js', path: 'log4js' }
                     ]
                 },
             ],
