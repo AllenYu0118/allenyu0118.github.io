@@ -13,11 +13,22 @@ module.exports = {
             //         { text: 'JavaScript', link: '/js/' }
             //     ]
             // },
+            { text: 'JavaScript', link: '/js/intersection-observer' },
             { text: 'Vue 3.0', link: '/vue3/' },
             { text: 'Nodejs', link: '/nodejs/' },
             { text: 'TypeScript', link: '/ts/' }
         ],
         sidebar: {
+            '/js/': [
+                {
+                    title: 'API',
+                    collapsable: false,
+                    // path: '/js/',
+                    children: [
+                        { title: '交叉观察器', path: 'intersection-observer' }
+                    ]
+                }
+            ],
             '/vue3/': [
                 {
                     title: '简介',
@@ -90,14 +101,6 @@ module.exports = {
                     ]
                 }
             ],
-
-            '/js/': [
-                {
-                    title: '简介',
-                    collapsable: false,
-                    path: '/js/'
-                }
-            ]
         },
         repo: 'yuxiaolei1989/yuxiaolei1989.github.io',
         repoLabel: 'GitHub',
