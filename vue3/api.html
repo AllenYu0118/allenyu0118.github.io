@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>reactive | Allen Yu</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/icon.png">
+    <meta name="description" content="前端工程师，技术爱好者，记录自己的学习内容以及技术思考">
+    <link rel="preload" href="/assets/css/0.styles.8f621e2c.css" as="style"><link rel="preload" href="/assets/js/app.ac774736.js" as="script"><link rel="preload" href="/assets/js/2.ecc89b73.js" as="script"><link rel="preload" href="/assets/js/34.ea2481ea.js" as="script"><link rel="prefetch" href="/assets/js/10.e9a7a38d.js"><link rel="prefetch" href="/assets/js/11.fe9a161d.js"><link rel="prefetch" href="/assets/js/12.6757c861.js"><link rel="prefetch" href="/assets/js/13.0dc34619.js"><link rel="prefetch" href="/assets/js/14.941c5204.js"><link rel="prefetch" href="/assets/js/15.9650f920.js"><link rel="prefetch" href="/assets/js/16.eabf4b3a.js"><link rel="prefetch" href="/assets/js/17.274013f2.js"><link rel="prefetch" href="/assets/js/18.29deb47b.js"><link rel="prefetch" href="/assets/js/19.c63d1482.js"><link rel="prefetch" href="/assets/js/20.89e846fb.js"><link rel="prefetch" href="/assets/js/21.5946b227.js"><link rel="prefetch" href="/assets/js/22.191df837.js"><link rel="prefetch" href="/assets/js/23.7416e54a.js"><link rel="prefetch" href="/assets/js/24.f013c36c.js"><link rel="prefetch" href="/assets/js/25.5300265d.js"><link rel="prefetch" href="/assets/js/26.3bda9cee.js"><link rel="prefetch" href="/assets/js/27.9d8e0e0b.js"><link rel="prefetch" href="/assets/js/28.e277d069.js"><link rel="prefetch" href="/assets/js/29.32c0c7a9.js"><link rel="prefetch" href="/assets/js/3.512cc10a.js"><link rel="prefetch" href="/assets/js/30.53e76366.js"><link rel="prefetch" href="/assets/js/31.1197b67c.js"><link rel="prefetch" href="/assets/js/32.8a5b4edc.js"><link rel="prefetch" href="/assets/js/33.288d6022.js"><link rel="prefetch" href="/assets/js/35.dfe2b968.js"><link rel="prefetch" href="/assets/js/36.551ca165.js"><link rel="prefetch" href="/assets/js/4.82bfc8e0.js"><link rel="prefetch" href="/assets/js/5.88ace8cf.js"><link rel="prefetch" href="/assets/js/6.db1d197d.js"><link rel="prefetch" href="/assets/js/7.37860287.js"><link rel="prefetch" href="/assets/js/8.9ea21b86.js"><link rel="prefetch" href="/assets/js/9.236c9fad.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8f621e2c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/icon.png" alt="Allen Yu" class="logo"> <span class="site-name can-hide">Allen Yu</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/intersection-observer.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue3/" class="nav-link router-link-active">
+  Vue 3.0
+</a></li><li class="dropdown-item"><!----> <a href="/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/other/browser-cache.html" class="nav-link">
+  Other
+</a></li></ul></div></div><div class="nav-item"><a href="/ts/" class="nav-link">
+  TypeScript
+</a></div> <a href="https://github.com/yuxiaolei1989/yuxiaolei1989.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/intersection-observer.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue3/" class="nav-link router-link-active">
+  Vue 3.0
+</a></li><li class="dropdown-item"><!----> <a href="/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/other/browser-cache.html" class="nav-link">
+  Other
+</a></li></ul></div></div><div class="nav-item"><a href="/ts/" class="nav-link">
+  TypeScript
+</a></div> <a href="https://github.com/yuxiaolei1989/yuxiaolei1989.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/vue3/" class="sidebar-link">简介</a></li><li><a href="/vue3/api.html" class="active sidebar-link">API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue3/api.html#reactive" class="sidebar-link">reactive</a></li><li class="sidebar-sub-header"><a href="/vue3/api.html#readonly" class="sidebar-link">readonly</a></li><li class="sidebar-sub-header"><a href="/vue3/api.html#isproxy" class="sidebar-link">isProxy</a></li><li class="sidebar-sub-header"><a href="/vue3/api.html#isreactive" class="sidebar-link">isReactive</a></li><li class="sidebar-sub-header"><a href="/vue3/api.html#isreadonly" class="sidebar-link">isReadonly</a></li><li class="sidebar-sub-header"><a href="/vue3/api.html#toraw" class="sidebar-link">toRaw</a></li><li class="sidebar-sub-header"><a href="/vue3/api.html#markraw" class="sidebar-link">markRaw</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="reactive"><a href="#reactive" class="header-anchor">#</a> reactive</h2> <p>返回一个响应式对象的副本</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>会深拷贝传入的对象，返回的对象与传入的对象不相等</p> <h2 id="readonly"><a href="#readonly" class="header-anchor">#</a> readonly</h2> <p>返回一个只读的对象，如果对只读对象操作，则会提醒。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> original <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> copy <span class="token operator">=</span> <span class="token keyword">readonly</span><span class="token punctuation">(</span>original<span class="token punctuation">)</span>
+
+<span class="token function">watchEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>copy<span class="token punctuation">.</span>count<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+original<span class="token punctuation">.</span>count<span class="token operator">++</span>
+
+copy<span class="token punctuation">.</span>count<span class="token operator">++</span> <span class="token comment">// Cannot assign to 'count' because it is a read-only property.Vetur(2540)</span>
+</code></pre></div><h2 id="isproxy"><a href="#isproxy" class="header-anchor">#</a> isProxy</h2> <p>判断一个对象是不是通过 <code>reactive</code> 或 <code>readonly</code> 创建的。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+<span class="token keyword">const</span> only <span class="token operator">=</span> <span class="token keyword">readonly</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+<span class="token keyword">const</span> onlyProxy <span class="token operator">=</span> <span class="token keyword">readonly</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span>
+
+<span class="token function">isProxy</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token comment">// false</span>
+<span class="token function">isProxy</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span> <span class="token comment">// true</span>
+<span class="token function">isProxy</span><span class="token punctuation">(</span>only<span class="token punctuation">)</span> <span class="token comment">// true</span>
+<span class="token function">isProxy</span><span class="token punctuation">(</span>onlyProxy<span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div><h2 id="isreactive"><a href="#isreactive" class="header-anchor">#</a> isReactive</h2> <p>判断一个对象是不是通过 <code>reactive</code> 创建的，<code>readonly</code> 创建的返回 <code>false</code></p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+<span class="token keyword">const</span> only <span class="token operator">=</span> <span class="token keyword">readonly</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+<span class="token keyword">const</span> onlyProxy <span class="token operator">=</span> <span class="token keyword">readonly</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span>
+
+<span class="token function">isReactive</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token comment">// false</span>
+<span class="token function">isReactive</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span> <span class="token comment">// true</span>
+<span class="token function">isReactive</span><span class="token punctuation">(</span>only<span class="token punctuation">)</span> <span class="token comment">// false</span>
+<span class="token function">isReactive</span><span class="token punctuation">(</span>onlyProxy<span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div><p><code>onlyProxy</code> 对象虽然也是 <code>readonly</code> 函数包裹，但是因为包裹的对象本身也是来自 <code>reactive</code>，所以返回 <code>true</code>。</p> <h2 id="isreadonly"><a href="#isreadonly" class="header-anchor">#</a> isReadonly</h2> <p>判断一个对象是不是通过 <code>readonly</code> 创建的，规则和 <code>isReactive</code> 一样，只要被符合条件的函数处理过，那么不管后续如何处理，都会返回 <code>true</code></p> <h2 id="toraw"><a href="#toraw" class="header-anchor">#</a> toRaw</h2> <p>获取代理对象的原始值，用于临时读取，而不会产生额外的开销，不建议保留引用对象持久使用，需要谨慎使用。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+
+obj <span class="token operator">===</span> <span class="token function">toRaw</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div><h2 id="markraw"><a href="#markraw" class="header-anchor">#</a> markRaw</h2> <p>标记一个对象，使其永远不会被 <code>reactive</code> 和 <code>readonly</code> 转换为响应式</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">9/15/2020, 11:46:02 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue3/" class="prev router-link-active">
+        简介
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ac774736.js" defer></script><script src="/assets/js/2.ecc89b73.js" defer></script><script src="/assets/js/34.ea2481ea.js" defer></script>
+  </body>
+</html>
