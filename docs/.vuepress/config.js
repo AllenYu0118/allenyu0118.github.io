@@ -7,15 +7,16 @@ module.exports = {
         sidebarDepth: 2,
         nav: [
             { text: 'Home', link: '/' },
-            // {
-            //     text: '分类',
-            //     items: [
-            //         { text: 'JavaScript', link: '/js/' }
-            //     ]
-            // },
-            { text: 'JavaScript', link: '/js/intersection-observer' },
-            { text: 'Vue 3.0', link: '/vue3/' },
-            { text: 'Nodejs', link: '/nodejs/' },
+            {
+                text: '分类',
+                items: [
+                    { text: 'JavaScript', link: '/js/intersection-observer' },
+                    { text: 'Vue 3.0', link: '/vue3/' },
+                    { text: 'Nodejs', link: '/nodejs/' },
+                    { text: 'Other', link: '/other/browser-cache' },
+                ]
+            },
+            
             { text: 'TypeScript', link: '/ts/' }
         ],
         sidebar: {
@@ -57,6 +58,16 @@ module.exports = {
                         { title: 'Log4js', path: 'log4js' }
                     ]
                 },
+            ],
+            '/other/': [
+                {
+                    title: '其他',
+                    collapsable: false,
+                    // path: '/js/',
+                    children: [
+                        { title: '浏览器缓存机制', path: 'browser-cache' }
+                    ]
+                }
             ],
             '/ts/': [
                 {
