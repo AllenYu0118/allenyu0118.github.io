@@ -23,6 +23,7 @@ jobs:
                 token: ${{ secrets.ACTION_TOKEN }}
                 branch: master
                 folder: docs/.vuepress/dist
+                repositoryName: AllenYu0118/allenyu0118.github.io
             #   env:
             #       ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
             #       BASE_BRANCH: dev
