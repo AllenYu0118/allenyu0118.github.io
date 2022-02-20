@@ -9,20 +9,18 @@
     "doc": "docs"
   },
   "dependencies": {
+    "vuepress": "^1.9.7",
     "vuepress-plugin-google-tag-manager": "0.0.4"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yuxiaolei1989/mySelf.git"
+    "url": "git+https://github.com/AllenYu0118/yuxiaolei1989.github.io"
   },
-  "author": "yuxiaolei",
+  "author": "AllenYu0118",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yuxiaolei1989/mySelf/issues"
+    "url": "https://github.com/AllenYu0118/yuxiaolei1989.github.io/issues"
   },
-  "homepage": "https://yuxiaolei1989.github.io",
-  "description": "",
-  "devDependencies": {
-    "vuepress": "^1.4.1"
-  }
+  "homepage": "https://allenyu0118.github.io",
+  "description": ""
 }

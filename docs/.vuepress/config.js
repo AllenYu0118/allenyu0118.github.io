@@ -65,7 +65,8 @@ module.exports = {
                     collapsable: false,
                     // path: '/js/',
                     children: [
-                        { title: '浏览器缓存机制', path: 'browser-cache' }
+                        { title: '浏览器缓存机制', path: 'browser-cache' },
+                        { title: '发布订阅模式', path: 'publish-subscribe' },
                     ]
                 }
             ],
