@@ -15,13 +15,13 @@ jobs:
 
             # 生成静态文件
             - name: Build
-                run: npm install && npm run docs:build
+              run: npm install && npm run docs:build
 
-            - name: Build and Deploy
+            - name: Deploy
               uses: JamesIves/github-pages-deploy-action@v4.2.5
               with:
                 token: ${{ secrets.ACTION_TOKEN }}
-                branch: master
+                BRANCH: master
                 folder: docs/.vuepress/dist
             #   env:
             #       ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
