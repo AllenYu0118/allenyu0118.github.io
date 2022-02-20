@@ -8,16 +8,24 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@master
+              uses: actions/checkout@v2
               with:
                   ref: dev
                   fetch-depth: 0
 
+            # 生成静态文件
+            - name: Build
+                run: npm install && npm run docs:build
+
             - name: Build and Deploy
               uses: JamesIves/github-pages-deploy-action@v4.2.5
-              env:
-                  ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
-                  BASE_BRANCH: dev
-                  BRANCH: master
-                  FOLDER: docs/.vuepress/dist
-                  BUILD_SCRIPT: npm install && npm run docs:build
+              with:
+                token: ${{ secrets.ACTION_TOKEN }}
+                branch: master
+                folder: docs/.vuepress/dist
+            #   env:
+            #       ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
+            #       BASE_BRANCH: dev
+            #       branch: master
+            #       folder: docs/.vuepress/dist
+            #       BUILD_SCRIPT: npm install && npm run docs:build
