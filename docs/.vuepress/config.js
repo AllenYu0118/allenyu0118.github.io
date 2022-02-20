@@ -2,9 +2,9 @@ module.exports = {
     theme: 'vdoing',
     title: 'Allen Yu',
     description: '前端工程师，技术爱好者，记录自己的学习内容以及技术思考',
-    head: [['link', { rel: 'icon', href: '/icon.png' }]],
+    head: [['link', { rel: 'icon', href: '/avatar.png' }]],
     themeConfig: {
-        logo: '/icon.png',
+        logo: '/avatar.png',
         sidebarDepth: 2,
         nav: [
             { text: 'Home', link: '/' },
