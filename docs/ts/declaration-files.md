@@ -1,3 +1,12 @@
+---
+title: declaration-files
+date: 2020-10-31 14:09:49
+permalink: /pages/6dcbdf/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 声明文件 (Declaration Files)
 
 当使用第三方库时，我们需要引用它的声明文件，才能获得对应的代码补全、接口提示等功能。

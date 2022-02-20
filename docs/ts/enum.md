@@ -1,3 +1,12 @@
+---
+title: enum
+date: 2020-10-31 14:09:49
+permalink: /pages/1d0b36/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 枚举 (Enum)
 
 枚举类型用于取值被限定在一定范围内的场景，比如一周只有七天，颜色被限定为红绿蓝等等。

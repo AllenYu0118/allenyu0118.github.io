@@ -1,3 +1,12 @@
+---
+title: type-of-array
+date: 2020-10-31 14:09:49
+permalink: /pages/0eabbb/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 数组类型 (Type Of Array)
 
 在 `TypeScript` 中，数组类型有多种定义方式，比较灵活。

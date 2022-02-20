@@ -1,3 +1,12 @@
+---
+title: class
+date: 2020-10-31 14:09:49
+permalink: /pages/bbcf5f/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 类 (Class)
 
 传统方法中，`JavaScript` 通过构造函数实现类的概念，通过原型链实现继承。而在 `ES6` 中，我们终于迎来了 `class`。

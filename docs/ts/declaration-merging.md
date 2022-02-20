@@ -1,3 +1,12 @@
+---
+title: declaration-merging
+date: 2020-10-31 14:09:49
+permalink: /pages/2be0b9/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 声明合并 (Declaration Merging)
 
 如果定义了两个相同名字的函数、接口或类，那么它们会合并成一个类型。

@@ -1,3 +1,12 @@
+---
+title: mortgage-calculator
+date: 2020-10-31 14:09:49
+permalink: /pages/6ee30d/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 房贷试算器 - TypeScript 版
 
 基于前面已学习的内容，对 2 年前的 `JavaScript` 版房贷试算项目，进行 `TypeScript` 改造。希望由具体的实战项目，能够强化已学习的知识点，以及在项目中的应用！

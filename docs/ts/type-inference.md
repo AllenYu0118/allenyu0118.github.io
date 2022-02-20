@@ -1,3 +1,12 @@
+---
+title: type-inference
+date: 2020-10-31 14:09:49
+permalink: /pages/81b374/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 类型推论 (Type Inference)
 
 如果没有明确的指定类型，那么 `TypeScript` 就会依据类型推论规则推断出一个类型。

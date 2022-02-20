@@ -1,3 +1,12 @@
+---
+title: types-alias
+date: 2020-10-31 14:09:49
+permalink: /pages/32a73e/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 类型别名 (Types Alias)
 
 类型别名用来给一个类型起个新名字。

@@ -1,4 +1,5 @@
 module.exports = {
+    theme: 'vdoing',
     title: 'Allen Yu',
     description: '前端工程师，技术爱好者，记录自己的学习内容以及技术思考',
     head: [['link', { rel: 'icon', href: '/icon.png' }]],
@@ -114,7 +115,7 @@ module.exports = {
                 }
             ],
         },
-        repo: 'yuxiaolei1989/yuxiaolei1989.github.io',
+        repo: 'AllenYu0118/AllenYu0118.github.io',
         repoLabel: 'GitHub',
         docsBranch: 'master',
         lastUpdated: 'Last Updated'

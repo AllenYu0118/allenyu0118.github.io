@@ -1,3 +1,12 @@
+---
+title: tuple
+date: 2020-10-31 14:09:49
+permalink: /pages/5d1bce/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 元组 (Tuple)
 
 数组合并了相同类型的对象，而元组（Tuple）合并了不同类型的对象。

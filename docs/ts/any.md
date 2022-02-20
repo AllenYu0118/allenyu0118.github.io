@@ -1,3 +1,12 @@
+---
+title: any
+date: 2020-10-31 14:09:49
+permalink: /pages/b87d32/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 任意值 (Any)
 
 任意值用来表示允许赋值为任意类型。

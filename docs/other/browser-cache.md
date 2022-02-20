@@ -1,3 +1,12 @@
+---
+title: browser-cache
+date: 2020-12-05 07:13:22
+permalink: /pages/3ad49e/
+categories:
+  - other
+tags:
+  - 
+---
 ## 浏览器缓存机制
 
 

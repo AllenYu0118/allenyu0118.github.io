@@ -1,3 +1,12 @@
+---
+title: type-of-function
+date: 2020-10-31 14:09:49
+permalink: /pages/8d2351/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 函数类型 (Type Of Function)
 
 函数是 `JavaScript` 应用程序的基础。它帮助我们实现抽象层，模拟类，信息隐藏和模块。在 `TypeScript` 里，虽然已经支持类，命名空间和模块，但函数仍然是主要的定义行为的地方。

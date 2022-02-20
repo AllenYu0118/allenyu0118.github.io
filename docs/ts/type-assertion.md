@@ -1,3 +1,12 @@
+---
+title: type-assertion
+date: 2020-10-31 14:09:49
+permalink: /pages/94a935/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 类型断言 (Type Assertion)
 
 类型断言可以手动指定一个值的类型。

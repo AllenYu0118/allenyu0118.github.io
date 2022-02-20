@@ -1,3 +1,12 @@
+---
+title: publish-subscribe
+date: 2020-12-08 18:21:02
+permalink: /pages/41c683/
+categories:
+  - other
+tags:
+  - 
+---
 ## 发布订阅模式
 
 

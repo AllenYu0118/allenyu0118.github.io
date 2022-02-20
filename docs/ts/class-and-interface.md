@@ -1,3 +1,12 @@
+---
+title: class-and-interface
+date: 2020-10-31 14:09:49
+permalink: /pages/299ec7/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 类与接口 ( Class And Interface)
 
 之前学习过，接口可以用于对「对象的形状」进行描述。

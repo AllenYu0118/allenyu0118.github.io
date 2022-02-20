@@ -1,3 +1,12 @@
+---
+title: union-types
+date: 2020-10-31 14:09:49
+permalink: /pages/9647a1/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 联合类型 (Union Types)
 
 联合类型表示取值可以是多种类型中的一种

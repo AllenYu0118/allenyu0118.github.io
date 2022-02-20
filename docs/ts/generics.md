@@ -1,3 +1,12 @@
+---
+title: generics
+date: 2020-10-31 14:09:49
+permalink: /pages/595304/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 泛型 (Generics)
 
 泛型是指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定类型的一种特性。

@@ -1,3 +1,12 @@
+---
+title: tsconfig
+date: 2020-10-31 14:09:49
+permalink: /pages/22f434/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 编译配置
 
 `TypeScript` 是无法直接运行的，需要通过编译为 `JavaScript` 文件才能执行，`tsconfig.json` 就是控制编译配置的文件。

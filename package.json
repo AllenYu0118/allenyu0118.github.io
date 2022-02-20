@@ -14,13 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AllenYu0118/yuxiaolei1989.github.io"
+    "url": "git+https://github.com/AllenYu0118/AllenYu0118.github.io"
   },
   "author": "AllenYu0118",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AllenYu0118/yuxiaolei1989.github.io/issues"
+    "url": "https://github.com/AllenYu0118/AllenYu0118.github.io/issues"
   },
   "homepage": "https://allenyu0118.github.io",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "vuepress-theme-vdoing": "^1.9.4"
+  }
 }

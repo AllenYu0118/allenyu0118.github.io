@@ -1,3 +1,12 @@
+---
+title: string-literal-types
+date: 2020-10-31 14:09:49
+permalink: /pages/5c5d88/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 字符串字面量类型 (String Literal Types)
 
 字符串字面量类型，可以用来约束取值只能是某几个字符串中的一个。

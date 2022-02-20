@@ -1,3 +1,12 @@
+---
+title: puppeteer
+date: 2020-10-31 14:09:49
+permalink: /pages/733734/
+categories:
+  - nodejs
+tags:
+  - 
+---
 ## 什么是 Puppeteer
 
 `puppeteer` 中文意思是：操纵木偶的人、傀儡师。

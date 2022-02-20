@@ -1,3 +1,12 @@
+---
+title: index
+date: 2020-10-31 14:09:49
+permalink: /pages/f41741/
+categories:
+  - ts
+tags:
+  - 
+---
 > 声明：本内容参考文档来自[TypeScript 入门教程](https://ts.xcatliu.com/basics/primitive-data-types)，感谢作者提供了由浅入深的内容，使我在学习 `TypeScript` 的时候更加的愉快。
 
 ## 什么是 TypeScript

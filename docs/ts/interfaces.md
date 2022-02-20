@@ -1,3 +1,12 @@
+---
+title: interfaces
+date: 2020-10-31 14:09:49
+permalink: /pages/fcf1b7/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 接口 (Interfaces)
 
 在 `TypeScript` 中，我们使用接口定义对象的类型。

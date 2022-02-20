@@ -1,3 +1,12 @@
+---
+title: primitive-data-types
+date: 2020-10-31 14:09:49
+permalink: /pages/22d937/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 原始数据类型 (Primitive Data Types)
 
 JavaScript 的类型分为两种：原始数据类型（Primitive Data Types）和对象类型（Object Types）。

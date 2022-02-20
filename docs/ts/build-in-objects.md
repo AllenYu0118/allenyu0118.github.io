@@ -1,3 +1,12 @@
+---
+title: build-in-objects
+date: 2020-10-31 14:09:49
+permalink: /pages/ae94d9/
+categories:
+  - ts
+tags:
+  - 
+---
 ## 内置对象 （Build In Objects）
 
 `JavaScript` 中有很多内置对象，它们可以直接在 `TypeScript` 中当做定义好的类型。
