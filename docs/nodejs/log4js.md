@@ -1,12 +1,13 @@
 ---
-title: log4js
+title: Log4js 日志模块
 date: 2020-10-31 14:09:49
 permalink: /pages/fae37a/
 categories:
   - nodejs
 tags:
-  - 
+  -
 ---
+
 ## Log4js 日志模块
 
 ## 简介
@@ -22,26 +23,25 @@ npm i log4js
 ## 使用
 
 ```typescript
-import { configure, getLogger } from "log4js";
+import { configure, getLogger } from 'log4js'
 
 configure({
-    // 获取输出类别
-    categories: { default: { appenders: ["cheese"], level: "error" } },
+  // 获取输出类别
+  categories: { default: { appenders: ['cheese'], level: 'error' } },
 
-    // 输出配置
-    appenders: {
-        // 对日志类型为 cheese 的进行输出
-        cheese: {
-            type: "dateFile",
-            filename: "logs/log",
-            pattern: 'yyyy-MM-dd.log',
-            alwaysIncludePattern: true,
-            daysToKeep: 7
-        }
+  // 输出配置
+  appenders: {
+    // 对日志类型为 cheese 的进行输出
+    cheese: {
+      type: 'dateFile',
+      filename: 'logs/log',
+      pattern: 'yyyy-MM-dd.log',
+      alwaysIncludePattern: true,
+      daysToKeep: 7,
     },
+  },
 })
 
 // 导出 logger 实例方法
-export var logger = getLogger("cheese");
+export var logger = getLogger('cheese')
 ```
-

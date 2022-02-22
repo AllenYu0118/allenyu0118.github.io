@@ -1,12 +1,13 @@
 ---
-title: api
+title: Vue3 响应式 Api
 date: 2020-10-31 14:09:49
 permalink: /pages/9b7ee3/
 categories:
   - vue3
 tags:
-  - 
+  -
 ---
+
 ## reactive
 
 返回一个响应式对象的副本
@@ -16,7 +17,6 @@ const obj = reactive({ count: 0 })
 ```
 
 会深拷贝传入的对象，返回的对象与传入的对象不相等
-
 
 ## readonly
 
@@ -67,8 +67,8 @@ isReactive(proxy) // true
 isReactive(only) // false
 isReactive(onlyProxy) // true
 ```
-`onlyProxy` 对象虽然也是 `readonly` 函数包裹，但是因为包裹的对象本身也是来自 `reactive`，所以返回 `true`。
 
+`onlyProxy` 对象虽然也是 `readonly` 函数包裹，但是因为包裹的对象本身也是来自 `reactive`，所以返回 `true`。
 
 ## isReadonly
 

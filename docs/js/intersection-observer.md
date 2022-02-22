@@ -1,13 +1,12 @@
 ---
-title: intersection-observer
+title: Intersection Observer API
 date: 2020-11-25 22:40:19
 permalink: /pages/f50f77/
 categories:
   - js
 tags:
-  - 
+  -
 ---
-## Intersection Observer API
 
 > Intersection Observer API提供了一种异步检测目标元素与祖先元素或 viewport 相交情况变化的方法。
 
