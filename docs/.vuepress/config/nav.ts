@@ -7,7 +7,7 @@ export const nav = [
       // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
       {
         text: '前端文章',
-        items: [{ text: 'JavaScript', link: '/pages/8143cc480faf9a11/' }],
+        items: [{ text: 'JavaScript', link: '/pages/f50f77/' }],
       },
       {
         text: '学习笔记',
@@ -25,5 +25,5 @@ export const nav = [
   //   ],
   // },
 
-  { text: 'TypeScript', link: '/ts/' },
+  // { text: 'TypeScript', link: '/ts/' },
 ]
