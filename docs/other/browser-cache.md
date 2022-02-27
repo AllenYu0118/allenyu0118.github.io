@@ -3,11 +3,10 @@ title: 浏览器缓存机制
 date: 2020-12-05 07:13:22
 permalink: /pages/3ad49e/
 categories:
-  - other
+  -
 tags:
   -
 ---
-
 
 ## 强缓存
 
@@ -18,11 +17,13 @@ tags:
 ```shell
 Expires: Thu, 08 Oct 2020 07:30:03 GMT
 ```
-上面配置的意思是：缓存在2020年10月8日7时30分03秒前有效
+
+上面配置的意思是：缓存在 2020 年 10 月 8 日 7 时 30 分 03 秒前有效
 
 ### Cache-Control 缓存控制
 
 存在多个属性值，但 `max-age` 最有意义，指定了缓存的时间，描述的是一个相对时间，而非绝对时间：
+
 ```shell
 Cache-Control: max-age=60
 ```
@@ -30,6 +31,7 @@ Cache-Control: max-age=60
 上面配置的意思是：缓存从当前时间的 60 秒内都有效
 
 ### 为什么有两个控制参数
+
 如果同时设置了 `Expires` 和 `Cache-Control`，哪个会生效呢？依据 `W3C` 的说明，`max-age` 优先于 `Expires`
 
 ## 协商缓存
