@@ -6,7 +6,7 @@ tagline: 前端工程师，技术爱好者，记录和总结自己
 # actionText: 快速上手 →
 # actionLink: /zh/guide/
 features:
-  - title: Lean
+  - title: Learn
     details: 自我驱动、有计划、有目的学习。
   - title: Think
     details: 问题的本质、解决方案。
