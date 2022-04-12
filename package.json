@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "vuepress": "^1.9.7",
-    "vuepress-plugin-google-tag-manager": "0.0.4"
+    "vuepress-plugin-google-tag-manager": "0.0.4",
+    "vuepress-theme-vdoing": "1.9.4"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,5 @@
     "url": "https://github.com/AllenYu0118/AllenYu0118.github.io/issues"
   },
   "homepage": "https://allenyu0118.github.io",
-  "description": "",
-  "devDependencies": {
-    "vuepress-theme-vdoing": "^1.9.4"
-  }
+  "description": ""
 }
