@@ -11,7 +11,7 @@ export const nav = [
       },
       {
         text: '学习笔记',
-        items: [{ text: '《TypeScript入门教程》', link: '/note/ts/' }],
+        items: [{ text: '《TypeScript入门教程》', link: '/note/typescript/' }],
       },
     ],
   },
