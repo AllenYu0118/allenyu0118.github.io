@@ -3,12 +3,12 @@ lockfileVersion: 5.3
 specifiers:
   vuepress: ^1.9.7
   vuepress-plugin-google-tag-manager: 0.0.4
-  vuepress-theme-vdoing: 1.9.4
+  vuepress-theme-vdoing: ^1.11.1
 
 dependencies:
   vuepress: 1.9.7
   vuepress-plugin-google-tag-manager: 0.0.4
-  vuepress-theme-vdoing: 1.9.4
+  vuepress-theme-vdoing: 1.11.1
 
 packages:
 
@@ -8224,8 +8224,8 @@ packages:
       smoothscroll-polyfill: 0.4.4
     dev: false
 
-  /vuepress-theme-vdoing/1.9.4:
-    resolution: {integrity: sha512-vq7aqZibTUjKeHI49Zt2VKtzjopCzSKjw+XMLpXIPPDf+KijEwI5nKLnJXMpzNFkMZwp+CRDGupctPRUu9+3Hw==}
+  /vuepress-theme-vdoing/1.11.1:
+    resolution: {integrity: sha512-rBYdQcYStfl7MAdQ+ga9O6Rv849pk6pf7m6hTBMC06M7v61BPiQt85Ai8CyL5l5BUM5GTTlEwPJqUa9iwoNbgg==}
     dependencies:
       '@better-scroll/core': 2.4.2
       '@better-scroll/slide': 2.4.2
